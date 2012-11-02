@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:clearsightstudio/ProMotion.git
-  revision: 65218395a10fbb68c2919e86c5e975a6a7479705
+  revision: a566ea04dd8a24859061390bdf4777b868aae104
   specs:
     ProMotion (0.2.0)
 
