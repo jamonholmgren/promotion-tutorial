@@ -19,6 +19,16 @@ class AboutProMotionScreen < ProMotion::Screen
         borderColor: UIColor.grayColor
       }
     }
+    
+    container = view.frame.size
+    button = UIButton.buttonWithType(UIButtonTypeRoundedRect)
+    button_size = [ 280, 50 ]
+    left_margin = (container.width / 2) - (button_size[0] / 2)
+    top_margin = (container.height / 2) - (button_size[1] / 2)
+    button.frame = [[ left_margin, top_margin ], button_size ]
+    button.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin
+    
+    add_element button
   end
 
   def save
