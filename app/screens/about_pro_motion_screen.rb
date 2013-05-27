@@ -19,18 +19,6 @@ class AboutProMotionScreen < ProMotion::Screen
         border_color: UIColor.grayColor
       }
     }
-    
-    container = view.frame.size
-    button = UIButton.buttonWithType(UIButtonTypeRoundedRect)
-    button_size = [ 280, 50 ]
-    left_margin = (container.width / 2) - (button_size[0] / 2)
-    top_margin = (container.height / 2) - (button_size[1] / 2)
-    set_attributes button, {
-      frame: [[ left_margin, top_margin ], button_size ],
-      resize: [ :bottom, :left, :right, :top ]
-    }
-    
-    add button
   end
 
   def save
