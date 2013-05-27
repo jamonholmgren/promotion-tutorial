@@ -1,1 +1,3 @@
-gem "ProMotion", :git => "git@github.com:clearsightstudio/ProMotion.git"
+source "https://rubygems.org"
+
+gem "ProMotion", "~> 0.6.4"

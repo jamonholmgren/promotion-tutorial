@@ -2,21 +2,21 @@ class AboutProMotionScreen < ProMotion::Screen
   title "About ProMotion"
 
   def will_appear
-    set_nav_bar_right_button "Save", action: :save 
+    set_nav_bar_button :right, title: "Save", action: :save 
 
     self.view.backgroundColor = UIColor.darkGrayColor
 
-    add_element UILabel.alloc.initWithFrame(CGRectMake(25, 50, 275, 150)), {
+    add UILabel.alloc.initWithFrame(CGRectMake(25, 50, 275, 150)), {
       text: "ProMotion is a new way to easily organize and develop RubyMotion apps using the concept of screens.",
-      borderStyle: UITextBorderStyleRoundedRect,
-      backgroundColor: UIColor.whiteColor,
+      border_style: UITextBorderStyleRoundedRect,
+      background_color: UIColor.whiteColor,
       font: UIFont.systemFontOfSize(14),
-      numberOfLines: 0,
-      lineBreakMode: UILineBreakModeWordWrap,
+      number_of_lines: 0,
+      line_break_mode: UILineBreakModeWordWrap,
       layer: {
-        borderWidth: 5,
-        cornerRadius: 15,
-        borderColor: UIColor.grayColor
+        border_width: 5,
+        corner_radius: 15,
+        border_color: UIColor.grayColor
       }
     }
     
@@ -25,13 +25,15 @@ class AboutProMotionScreen < ProMotion::Screen
     button_size = [ 280, 50 ]
     left_margin = (container.width / 2) - (button_size[0] / 2)
     top_margin = (container.height / 2) - (button_size[1] / 2)
-    button.frame = [[ left_margin, top_margin ], button_size ]
-    button.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin
+    set_attributes button, {
+      frame: [[ left_margin, top_margin ], button_size ],
+      resize: [ :bottom, :left, :right, :top ]
+    }
     
-    add_element button
+    add button
   end
 
   def save
-    close_screen saved: true
+    close saved: true
   end
 end

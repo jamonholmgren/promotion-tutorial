@@ -1,5 +1,7 @@
-class AppDelegate < ProMotion::AppDelegateParent
+class AppDelegate < ProMotion::Delegate
+  
   def on_load(app, options)
-    open_screen HomeScreen.new(nav_bar: true)
+    open HomeScreen.new(nav_bar: true)
   end
+  
 end

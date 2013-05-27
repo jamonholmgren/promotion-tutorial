@@ -19,7 +19,7 @@ class HomeScreen < ProMotion::GroupedTableScreen
   end
 
   def about_promotion
-    open_screen AboutProMotionScreen
+    open AboutProMotionScreen
   end
 
   def about_jamon
@@ -35,7 +35,7 @@ class HomeScreen < ProMotion::GroupedTableScreen
   end
 
   def articles
-    open_screen ArticlesScreen
+    open ArticlesScreen
   end
 
   def on_return(args={})
